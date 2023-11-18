@@ -2,6 +2,7 @@ package com.ajk.motoboy
 
 import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -61,6 +62,7 @@ class BarCodeFragment : Fragment() {
         ScanContract()
     ) { result: ScanIntentResult ->
         if (!result.contents.isNullOrEmpty()) {
+            binding.textBarcode.text = result.contents
             Toast.makeText(requireContext(), "Scan Result: ${result.contents}", Toast.LENGTH_SHORT).show()
         } else {
             // CANCELEDJoao2023..
@@ -70,22 +72,12 @@ class BarCodeFragment : Fragment() {
 
 
 
-    private fun startLoading() = activityCallback?.showActionButton(true)
+    private fun startLoading() = activityCallback?.showActionButton("")
 
     // 1) Como se comunicar com a main activity
     // 2) como definir callbacks
     // 3) como chamar os metodos partindo do fragment
-    fun showAppBarBackButton(show: Boolean = true) {
-        if (show) {
 
-//            val backArrow = ContextCompat.getDrawable(requireContext(), R.drawable.ic_back)
-//            backArrow?.setColor(requireContext(), R.color.image_button)
-//            (activityCallBack as MainActivity).supportActionBar?.setHomeAsUpIndicator(backArrow)
-//            activityCallBack?.showAppBarBackButton(show)
-        } else {
-            activityCallback?.showActionButton(false)
-        }
-    }
 
     override fun onAttach(context: Context) {
         super.onAttach(context)

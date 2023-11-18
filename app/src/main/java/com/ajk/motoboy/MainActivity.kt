@@ -28,12 +28,8 @@ class MainActivity : AppCompatActivity(), ActivityCallback {
         transaction.commit()
     }
 
-    override fun showActionButton(show: Boolean) {
-        try {
-            if (show) {
-            }
-        } catch (e: Exception) {
-            TODO("Not yet implemented")
-        }
+    override fun showActionButton(codigoBarraLido: String) {
+        TODO("Not yet implemented")
     }
+
 }
