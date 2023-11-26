@@ -1,6 +1,7 @@
 package com.ajk.motoboy
 
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.ajk.motoboy.databinding.ActivityMainBinding
@@ -19,6 +20,23 @@ class MainActivity : AppCompatActivity(), ActivityCallback {
         setContentView(binding.root)
 
         loadFragment(BarCodeFragment())
+
+       binding.bottomNav.setOnItemSelectedListener {
+            when (it.itemId) {
+                R.id.home -> {
+                    loadFragment(BarCodeFragment())
+                    true
+                }
+                R.id.foto -> {
+                    loadFragment(HomeFragment())
+                    true
+                }
+
+                else -> {
+                    false
+                }
+            }
+        }
 
     }
 

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "399254154428",
+    "project_id": "moto-boy-814d3",
+    "storage_bucket": "moto-boy-814d3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:399254154428:android:7e281c28ec3f9ee97cf4b9",
+        "android_client_info": {
+          "package_name": "com.ajk.motoboy"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMfDI4Yu9volylyr9yDelQtLbWmKZYOFs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

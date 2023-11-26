@@ -35,11 +35,11 @@ class BarCodeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-      teste()
+        chamaScanner()
     }
 
-    fun teste() {
-        launchScanner()
+    fun chamaScanner() {
+       // launchScanner()
         binding?.listaAlunos?.setOnClickListener {
             launchScanner()
 

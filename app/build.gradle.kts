@@ -1,7 +1,7 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-//    id("com.google.gms.google-services")
+    id("com.google.gms.google-services")
 }
 
 
@@ -63,10 +63,10 @@ dependencies {
 
 
     //firebase
-//    implementation(platform("com.google.firebase:firebase-bom:32.5.0"))
-//    implementation("com.google.firebase:firebase-analytics")
-//    implementation ("com.google.firebase:firebase-ml-vision:24.0.3")
-//    implementation ("com.google.firebase:firebase-ml-vision-image-label-model:20.0.1")
+    implementation(platform("com.google.firebase:firebase-bom:32.6.0"))
+    implementation("com.google.firebase:firebase-analytics")
+    implementation ("com.google.firebase:firebase-ml-vision:24.0.3")
+    implementation ("com.google.firebase:firebase-ml-vision-image-label-model:20.0.1")
 
     implementation ("com.journeyapps:zxing-android-embedded:4.3.0")
 }
